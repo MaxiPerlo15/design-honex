@@ -747,6 +747,14 @@ body::after {
   transform: translateY(-2px);
 }
 
+.bk-box {
+  background: transparent;
+}
+
+.bk-box:hover {
+  background: transparent;
+}
+
 .marquee {
   animation: marquee 24s linear infinite;
   width: max-content;

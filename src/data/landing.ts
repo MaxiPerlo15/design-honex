@@ -226,15 +226,19 @@ export const proofClaim: ProofClaim = {
   body: "Si las grandes marcas miran lo que hago, imaginate lo que puedo hacer por la tuya.",
   snapshots: [
     {
-      name: "Burger King",
-      label: "Burger King",
+      name: "Honex Design",
+      label: "HONEX DESIGN",
       category: "Prueba visual",
+      image: "/publicacion-honex.webp",
+      href: "https://www.instagram.com/p/DXkZb2PllEv/?img_index=1",
       featured: true,
     },
     {
-      name: "Honex Design",
-      label: "HONEX DESIGN",
+      name: "Burger King",
+      label: "Burger King",
       category: "Contraste",
+      image: "/publicacion-burgerking.webp",
+      href: "https://www.instagram.com/p/DXkZb2PllEv/?img_index=1",
       featured: false,
     },
   ],
