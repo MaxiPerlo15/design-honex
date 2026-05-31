@@ -35,6 +35,11 @@ export type ClientItem = {
   featured?: boolean;
 };
 
+export type ServicesMarqueeItem = {
+  name: string;
+  href?: string;
+};
+
 export type PortfolioItem = {
   name: string;
   category: string;
@@ -218,6 +223,15 @@ export const clients: ClientItem[] = [
   { name: "Brigada Fucsia" },
   { name: "Jean's Burgers" },
   { name: "Lodosa" },
+];
+
+export const servicesMarquee: ServicesMarqueeItem[] = [
+  { name: "Branding" },
+  { name: "Diseño gráfico" },
+  { name: "Social media" },
+  { name: "Contenido" },
+  { name: "Meta Ads" },
+  { name: "Google Ads" },
 ];
 
 export const proofClaim: ProofClaim = {

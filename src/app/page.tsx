@@ -1,5 +1,5 @@
 import { AnimationEffects } from "@/components/landing/AnimationEffects";
-import { ClientMarquee } from "@/components/landing/ClientMarquee";
+import { ServicesMarquee } from "@/components/landing/ServicesMarquee";
 import { Contact } from "@/components/landing/Contact";
 import { Footer } from "@/components/landing/Footer";
 import { Hero } from "@/components/landing/Hero";
@@ -10,7 +10,6 @@ import { BusinessDiagnostic } from "@/components/landing/BusinessDiagnostic";
 import { Process } from "@/components/landing/Process";
 import { Services } from "@/components/landing/Services";
 import {
-  clients,
   contactLinks,
   hero,
   navLinks,
@@ -19,6 +18,7 @@ import {
   processSteps,
   services,
   businessDiagnostic,
+  servicesMarquee,
 } from "@/data/landing";
 
 export default function Home() {
@@ -59,7 +59,7 @@ export default function Home() {
       <Nav logoSrc={hero.logoSrc} logoAlt={hero.logoAlt} links={navLinks} />
       <Hero hero={hero} />
       <ProofClaim claim={proofClaim} />
-      <ClientMarquee clients={clients} label="Trabajé con →" />
+      <ServicesMarquee services={servicesMarquee} label="Especialista en →" />
       <Services services={services} />
       <BusinessDiagnostic content={businessDiagnostic} />
       <Portfolio items={portfolioItems} />
