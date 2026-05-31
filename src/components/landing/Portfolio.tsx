@@ -96,7 +96,7 @@ export function Portfolio({ items }: PortfolioProps) {
           className="btn-cut magnetic fade-in inline-flex border-2 border-white/25 px-7 py-4 font-display text-sm font-black uppercase tracking-[0.12em] transition hover:-translate-y-1 hover:border-[#00ff41] hover:text-[#00ff41]"
           href="https://www.instagram.com/designhonex"
           target="_blank"
-          rel="noreferrer"
+          rel="noopener noreferrer"
           data-magnetic="true"
           data-reveal
         >

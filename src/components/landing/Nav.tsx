@@ -57,7 +57,7 @@ export function Nav({ logoSrc, logoAlt, links }: NavProps) {
         <a
           href="#inicio"
           className="group flex items-center gap-3 focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00ff41] focus-visible:outline-offset-4"
-          aria-label="Honex Design"
+          aria-label="Design Honex"
         >
           <Image
             src={logoSrc}

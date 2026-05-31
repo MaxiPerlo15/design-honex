@@ -33,7 +33,7 @@ export function Contact({ links }: ContactProps) {
               className="contact-link"
               href={link.href}
               target={link.external ? "_blank" : undefined}
-              rel={link.external ? "noreferrer" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
               data-magnetic="true"
             >
               <span>

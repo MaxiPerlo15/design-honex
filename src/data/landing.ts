@@ -166,7 +166,7 @@ export const hero: HeroContent = {
     { value: "∞", label: "Contenido" },
   ],
   logoSrc: "/logo-designhonex.webp",
-  logoAlt: "Honex Design",
+  logoAlt: "Design Honex",
 };
 
 export const services: ServiceItem[] = [

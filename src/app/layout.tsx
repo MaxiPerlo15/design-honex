@@ -28,21 +28,24 @@ const spaceMono = Space_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://designhonex.com"),
-  title: "Honex Design | Social Media y Diseño Digital",
+  title: "Design Honex | Social Media, Branding y Diseño en Córdoba",
   description:
-    "Landing page de Honex Design: branding, social media, contenido y estrategia digital.",
+    "Social media, branding, diseño gráfico y contenido para negocios en Córdoba y remoto. Estrategia + diseño con criterio. Contactame por WhatsApp.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Honex Design | Social Media y Diseño Digital",
+    title: "Design Honex | Social Media, Branding y Diseño en Córdoba",
     description:
-      "Branding, social media, contenido y estrategia digital para marcas que necesitan comunicar mejor.",
+      "Social media, branding, diseño gráfico y contenido para negocios en Córdoba y remoto. Estrategia + diseño con criterio. Contactame por WhatsApp.",
     url: "/",
-    siteName: "Honex Design",
+    siteName: "Design Honex",
     images: [
       {
-        url: "/logo-designhonex.webp",
-        width: 370,
-        height: 584,
-        alt: "Honex Design",
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Design Honex — Social media, branding y diseño en Córdoba",
       },
     ],
     locale: "es_AR",
@@ -50,10 +53,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Honex Design | Social Media y Diseño Digital",
+    title: "Design Honex | Social Media, Branding y Diseño en Córdoba",
     description:
-      "Branding, social media, contenido y estrategia digital para marcas que necesitan comunicar mejor.",
-    images: ["/logo-designhonex.webp"],
+      "Social media, branding, diseño gráfico y contenido para negocios en Córdoba y remoto. Estrategia + diseño con criterio. Contactame por WhatsApp.",
+    images: ["/twitter-image"],
   },
 };
 

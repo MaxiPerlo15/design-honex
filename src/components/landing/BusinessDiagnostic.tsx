@@ -220,7 +220,7 @@ export function BusinessDiagnostic({ content }: BusinessDiagnosticProps) {
                   className="btn-white"
                   href={whatsappHref}
                   target="_blank"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                   aria-label={`${content.ctaLabel} por WhatsApp`}
                 >
                   {content.ctaLabel} →

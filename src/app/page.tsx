@@ -22,8 +22,39 @@ import {
 } from "@/data/landing";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    name: "Design Honex",
+    url: "https://designhonex.com",
+    description:
+      "Social media, branding, diseño gráfico y contenido para negocios en Córdoba y remoto. Estrategia + diseño con criterio.",
+    image: "https://designhonex.com/opengraph-image",
+    logo: "https://designhonex.com/logo-designhonex.webp",
+    areaServed: ["Córdoba, Argentina", "Argentina", "Remote"],
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Córdoba",
+      addressRegion: "Córdoba",
+      addressCountry: "AR",
+    },
+    contactPoint: [
+      {
+        "@type": "ContactPoint",
+        contactType: "customer support",
+        telephone: "+543533432075",
+        availableLanguage: ["es"],
+      },
+    ],
+    sameAs: ["https://www.instagram.com/designhonex"],
+  } as const;
+
   return (
     <main className="min-h-screen overflow-x-clip bg-[#0a0a0a] text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <AnimationEffects />
       <Nav logoSrc={hero.logoSrc} logoAlt={hero.logoAlt} links={navLinks} />
       <Hero hero={hero} />
