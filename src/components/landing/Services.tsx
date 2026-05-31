@@ -6,7 +6,10 @@ type ServicesProps = {
 
 export function Services({ services }: ServicesProps) {
   return (
-    <section id="servicios" className="bg-[#0a0a0a] px-5 py-20 md:px-8 md:py-24">
+    <section
+      id="servicios"
+      className="scroll-mt-28 bg-[#0a0a0a] px-5 py-20 md:scroll-mt-32 md:px-8 md:py-24"
+    >
       <div className="mx-auto max-w-6xl">
         <div data-reveal>
           <p className="ds-kicker text-[#00ff41]">Lo que hago</p>
@@ -27,7 +30,7 @@ export function Services({ services }: ServicesProps) {
             >
               <div className="number-pill">{service.number}</div>
               <h3 className="ds-card-title mt-8">{service.title}</h3>
-              <p className="ds-card-copy mt-4 text-white/56">{service.description}</p>
+              <p className="ds-card-copy mt-4 text-white/68 md:text-white/56">{service.description}</p>
             </article>
           ))}
         </div>

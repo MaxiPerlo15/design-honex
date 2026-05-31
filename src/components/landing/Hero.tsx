@@ -16,7 +16,7 @@ export function Hero({ hero }: HeroProps) {
           <h1 className="ds-hero hero-title mt-5" aria-label={hero.titleLines.join(" ")}>
             <span className="hero-line hero-line-1 block">{hero.titleLines[0]} </span>
             <span className="hero-line hero-line-2 text-outline block">{hero.titleLines[1]} </span>
-            <span className="hero-line hero-line-3 block text-[#1400ff]">{hero.titleLines[2]}</span>
+            <span className="hero-line hero-line-3 block text-[#4b3bff]">{hero.titleLines[2]}</span>
           </h1>
           <p className="hero-copy ds-body mt-6 max-w-md text-white/58">
             {hero.body}

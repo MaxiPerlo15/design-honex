@@ -11,7 +11,10 @@ export function Portfolio({ items }: PortfolioProps) {
   const repeatedItems = [...carouselItems, ...carouselItems];
 
   return (
-    <section id="portfolio" className="overflow-hidden bg-[#0a0a0a] px-5 py-20 md:px-8 md:py-24">
+    <section
+      id="portfolio"
+      className="scroll-mt-28 overflow-hidden bg-[#0a0a0a] px-5 py-20 md:scroll-mt-32 md:px-8 md:py-24"
+    >
       <div className="fade-in mx-auto grid max-w-6xl gap-7 md:grid-cols-2 md:items-end" data-reveal>
         <div>
           <p className="ds-kicker text-[#00ff41]">Portfolio</p>

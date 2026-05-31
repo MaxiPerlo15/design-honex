@@ -14,7 +14,7 @@ export function ClientMarquee({ clients, label }: ClientMarqueeProps) {
         {label}
       </span>
       <div className="overflow-hidden">
-        <div className="marquee whitespace-nowrap font-display text-sm font-bold uppercase tracking-[0.14em] text-white/36">
+        <div className="marquee whitespace-nowrap font-display text-sm font-bold uppercase tracking-[0.14em] text-white/50">
           {repeatedClients.map((client, index) =>
             client.href ? (
               <a
