@@ -37,7 +37,6 @@ export type ClientItem = {
 
 export type PortfolioItem = {
   name: string;
-  label: string;
   category: string;
   mark?: string;
   image?: string;
@@ -151,7 +150,8 @@ export const navLinks: NavLink[] = [
   { label: "Proceso", href: "#proceso" },
   { label: "Hablemos", href: "#contacto", emphasis: true },
 ];
-  
+
+
 export const hero: HeroContent = {
   eyebrow: "",
   titleLines: ["Tu marca", "no es", "invisible."],
@@ -242,23 +242,29 @@ export const proofClaim: ProofClaim = {
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    name: "Juegos Digitales Chile",
-    label: "Marca real",
+    name: "CJM Digitales",
     category: "Portfolio",
     image: "/juegos-digitales-chile-cjmdigitales.webp",
     featured: true,
+    href: "https://www.instagram.com/cjmdigitalescl/",
   },
   {
-    name: "Popes",
-    label: "Marca real",
+    name: "Popes Burguers",
     category: "Portfolio",
     image: "/popes.webp",
+    href: "https://www.instagram.com/popes.burguers/",
   },
   {
-    name: "Ruggeri",
-    label: "Marca real",
+    name: "Ruggeri Automotores",
     category: "Portfolio",
     image: "/ruggeri.webp",
+    href: "https://www.instagram.com/ruggeri_automotores/",
+  },
+  {
+    name: "Atomic Burger",
+    category: "Portfolio",
+    image: "/atomic.webp",
+    href: "https://www.instagram.com/atomicburgerok/",
   },
 ];
 

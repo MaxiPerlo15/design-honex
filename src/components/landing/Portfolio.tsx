@@ -20,7 +20,7 @@ export function Portfolio({ items }: PortfolioProps) {
             <span className="text-outline">reales.</span>
           </h2>
         </div>
-        <p className="ds-body max-w-lg text-white/68">
+        <p className="ds-body max-w-lg text-white/68 md:self-center md:pt-10 lg:pt-14">
           Branding, RRSS y contenido para negocios de Córdoba y del país. Esto es lo que hago, no lo que prometo.
         </p>
       </div>
@@ -30,19 +30,26 @@ export function Portfolio({ items }: PortfolioProps) {
           {repeatedItems.map((item, index) => {
             const card = (
               <article
-                className={`logo-card ${item.featured ? "border border-[#00ff41]/35" : ""}`}
+                className="logo-card"
                 aria-label={item.name}
-                title={item.category}
+                title={item.name}
               >
-                <div className="portfolio-mark relative grid size-10 place-items-center overflow-hidden">
+                <div className="portfolio-bg" aria-hidden="true">
                   {item.image ? (
-                    <Image src={item.image} alt={item.name} fill sizes="40px" className="object-contain" />
+                    <Image
+                      src={item.image}
+                      alt={item.name}
+                      fill
+                      sizes="(min-width: 768px) 280px, 220px"
+                      className="object-contain opacity-45 brightness-125 contrast-110"
+                    />
                   ) : (
                     <span>{item.mark ?? item.name.slice(0, 2).toUpperCase()}</span>
                   )}
                 </div>
-                <h3 className="font-display text-xl font-black uppercase tracking-[0.04em]">{item.name}</h3>
-                <p className="font-mono text-[14px] uppercase tracking-[0.12em] text-white/42">{item.label}</p>
+                <div className="portfolio-content">
+                  <h3 className="font-display text-xl font-black uppercase tracking-[0.04em]">{item.name}</h3>
+                </div>
               </article>
             );
 

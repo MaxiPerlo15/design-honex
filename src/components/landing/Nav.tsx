@@ -29,6 +29,9 @@ export function Nav({ logoSrc, logoAlt, links }: NavProps) {
             className="h-11 w-auto shrink-0 object-contain md:h-12"
             priority
           />
+          <span className="font-display text-base font-black uppercase leading-none tracking-[0.08em] text-[#00ff41] md:text-lg">
+            Director <span className="block md:inline">Creativo</span>
+          </span>
         </a>
 
         <div className="hidden items-center gap-7 font-display text-[14px] font-bold uppercase tracking-[0.14em] text-white/50 md:flex">
