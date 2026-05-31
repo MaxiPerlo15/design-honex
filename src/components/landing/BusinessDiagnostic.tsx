@@ -136,7 +136,7 @@ export function BusinessDiagnostic({ content }: BusinessDiagnosticProps) {
           <p className="quiz-sub">{content.body}</p>
         </div>
 
-        <div className="quiz-steps-bar" aria-label="Progreso del diagnóstico">
+        <div className="quiz-steps-bar" aria-hidden="true">
           <span className={`quiz-step-dot ${step === 0 ? "active" : "done"}`} aria-hidden="true" />
           <span className={`quiz-step-dot ${step === 1 ? "active" : step === 2 ? "done" : ""}`} aria-hidden="true" />
         </div>
@@ -174,7 +174,7 @@ export function BusinessDiagnostic({ content }: BusinessDiagnosticProps) {
                     </span>
                     <span className="min-w-0">
                       <span className="block font-bold uppercase tracking-[0.02em]">{option.label}</span>
-                      <small className="mt-1 block text-[15px] text-white/55">{option.sub}</small>
+                      <small className="mt-1 block text-[15px] text-white/68 md:text-white/55">{option.sub}</small>
                     </span>
                   </button>
                 );
