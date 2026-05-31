@@ -19,8 +19,8 @@ vi.mock("@/components/landing/ProofClaim", () => ({
   ProofClaim: () => <section data-testid="proof-claim">ProofClaim</section>,
 }));
 
-vi.mock("@/components/landing/ClientMarquee", () => ({
-  ClientMarquee: () => <section data-testid="clients">Clients</section>,
+vi.mock("@/components/landing/ServicesMarquee", () => ({
+  ServicesMarquee: () => <section data-testid="services-marquee">ServicesMarquee</section>,
 }));
 
 vi.mock("@/components/landing/Services", () => ({

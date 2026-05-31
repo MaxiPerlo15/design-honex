@@ -28,13 +28,6 @@ export type ServiceItem = {
   description: string;
 };
 
-export type ClientItem = {
-  name: string;
-  href?: string;
-  label?: string;
-  featured?: boolean;
-};
-
 export type ServicesMarqueeItem = {
   name: string;
   href?: string;
@@ -211,18 +204,6 @@ export const services: ServiceItem[] = [
     description:
       "Activaciones para stories, recursos virales y mecánicas que convierten atención en movimiento real.",
   },
-];
-
-export const clients: ClientItem[] = [
-  { name: "Mr. Spock" },
-  { name: "Apple del Sur" },
-  { name: "Ra·me" },
-  { name: "Sandra Almaraz" },
-  { name: "Bisted House" },
-  { name: "DIA" },
-  { name: "Brigada Fucsia" },
-  { name: "Jean's Burgers" },
-  { name: "Lodosa" },
 ];
 
 export const servicesMarquee: ServicesMarqueeItem[] = [
