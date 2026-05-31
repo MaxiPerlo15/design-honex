@@ -1,0 +1,30 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#0A0A0A"/>
+  <path d="M0 470H1200V630H0V470Z" fill="#1400FF"/>
+  <path d="M0 0H1200V630H0V0Z" fill="url(#grain)" opacity="0.18"/>
+  <g opacity="0.18">
+    <path d="M0 536L90 446H138L48 536H0Z" fill="white"/>
+    <path d="M126 536L216 446H264L174 536H126Z" fill="white"/>
+    <path d="M252 536L342 446H390L300 536H252Z" fill="white"/>
+    <path d="M378 536L468 446H516L426 536H378Z" fill="white"/>
+    <path d="M504 536L594 446H642L552 536H504Z" fill="white"/>
+    <path d="M630 536L720 446H768L678 536H630Z" fill="white"/>
+    <path d="M756 536L846 446H894L804 536H756Z" fill="white"/>
+    <path d="M882 536L972 446H1020L930 536H882Z" fill="white"/>
+    <path d="M1008 536L1098 446H1146L1056 536H1008Z" fill="white"/>
+  </g>
+  <text x="96" y="124" fill="#00FF41" font-family="Arial Narrow, Arial, sans-serif" font-size="22" font-weight="700" letter-spacing="8">SOCIAL MEDIA · DISEÑO DIGITAL</text>
+  <text x="92" y="278" fill="white" font-family="Arial Narrow, Arial, sans-serif" font-size="116" font-weight="900" letter-spacing="0">HONEX</text>
+  <text x="92" y="392" fill="#1400FF" font-family="Arial Narrow, Arial, sans-serif" font-size="116" font-weight="900" letter-spacing="0">DESIGN</text>
+  <text x="96" y="454" fill="white" fill-opacity="0.66" font-family="Arial, sans-serif" font-size="28">Branding, contenido y estrategia digital para marcas que necesitan comunicar mejor.</text>
+  <rect x="92" y="510" width="332" height="58" fill="#00FF41"/>
+  <text x="120" y="548" fill="#0A0A0A" font-family="Arial Narrow, Arial, sans-serif" font-size="26" font-weight="900" letter-spacing="3">DESIGNHONEX.COM</text>
+  <defs>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch"/>
+    </filter>
+    <pattern id="grain" width="240" height="240" patternUnits="userSpaceOnUse">
+      <rect width="240" height="240" filter="url(#noise)" opacity="0.65"/>
+    </pattern>
+  </defs>
+</svg>
