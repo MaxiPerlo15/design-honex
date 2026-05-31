@@ -226,8 +226,8 @@ export const proofClaim: ProofClaim = {
   body: "Si las grandes marcas miran lo que hago, imaginate lo que puedo hacer por la tuya.",
   snapshots: [
     {
-      name: "Honex Design",
-      label: "HONEX DESIGN",
+      name: "design honex",
+      label: "DESIGN HONEX",
       category: "Prueba visual",
       image: "/publicacion-honex.webp",
       href: "https://www.instagram.com/p/DXkZb2PllEv/?img_index=1",

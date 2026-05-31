@@ -820,6 +820,31 @@ body::after {
   transform: translateY(-4px);
 }
 
+.portfolio-soon {
+  background: rgba(0, 0, 0, 0.22);
+  backdrop-filter: blur(14px);
+}
+
+.portfolio-soon:hover {
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.portfolio-soon-bg {
+  background:
+    radial-gradient(circle at 20% 20%, rgba(0, 0, 0, 0.68), transparent 34%),
+    radial-gradient(circle at 80% 30%, rgba(0, 0, 0, 0.52), transparent 28%),
+    linear-gradient(135deg, rgba(0, 0, 0, 0.72), rgba(10, 10, 10, 0.92));
+  inset: 0;
+  filter: blur(10px);
+  position: absolute;
+  transform: scale(1.15);
+}
+
+.portfolio-content-soon {
+  min-height: 100%;
+  padding-top: 7rem;
+}
+
 .portfolio-bg {
   inset: 1.25rem;
   opacity: 0.34;

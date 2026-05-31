@@ -7,7 +7,8 @@ type PortfolioProps = {
 };
 
 export function Portfolio({ items }: PortfolioProps) {
-  const repeatedItems = [...items, ...items];
+  const carouselItems = [...items, { name: "Proximamente", category: "Portfolio" }];
+  const repeatedItems = [...carouselItems, ...carouselItems];
 
   return (
     <section id="portfolio" className="overflow-hidden bg-[#0a0a0a] px-5 py-20 md:px-8 md:py-24">
@@ -28,32 +29,46 @@ export function Portfolio({ items }: PortfolioProps) {
       <div className="logo-marquee -mx-5 mt-12 md:-mx-8">
         <div className="logo-track">
           {repeatedItems.map((item, index) => {
+            const isSoonCard = item.name === "Proximamente";
             const card = (
               <article
-                className="logo-card"
+                className={`logo-card ${isSoonCard ? "portfolio-soon" : ""}`}
                 aria-label={item.name}
                 title={item.name}
               >
-                <div className="portfolio-bg" aria-hidden="true">
-                  {item.image ? (
-                    <Image
-                      src={item.image}
-                      alt={item.name}
-                      fill
-                      sizes="(min-width: 768px) 280px, 220px"
-                      className="object-contain opacity-45 brightness-125 contrast-110"
-                    />
-                  ) : (
-                    <span>{item.mark ?? item.name.slice(0, 2).toUpperCase()}</span>
-                  )}
-                </div>
-                <div className="portfolio-content">
-                  <h3 className="font-display text-xl font-black uppercase tracking-[0.04em]">{item.name}</h3>
-                </div>
+                {isSoonCard ? (
+                  <>
+                    <div className="portfolio-soon-bg" aria-hidden="true" />
+                    <div className="portfolio-content portfolio-content-soon">
+                      <h3 className="font-display text-xl font-black uppercase tracking-[0.04em] text-white/92">
+                        Proximamente...
+                      </h3>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="portfolio-bg" aria-hidden="true">
+                      {item.image ? (
+                        <Image
+                          src={item.image}
+                          alt={item.name}
+                          fill
+                          sizes="(min-width: 768px) 280px, 220px"
+                          className="object-contain opacity-45 brightness-125 contrast-110"
+                        />
+                      ) : (
+                        <span>{item.mark ?? item.name.slice(0, 2).toUpperCase()}</span>
+                      )}
+                    </div>
+                    <div className="portfolio-content">
+                      <h3 className="font-display text-xl font-black uppercase tracking-[0.04em]">{item.name}</h3>
+                    </div>
+                  </>
+                )}
               </article>
             );
 
-            if (item.href) {
+            if (!isSoonCard && item.href) {
               return (
                 <a
                   key={`${item.name}-${index}`}
