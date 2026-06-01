@@ -172,10 +172,6 @@ export function Nav({ logoSrc, logoAlt, links }: NavProps) {
                 >
                   {ctaLink.label} →
                 </a>
-
-                <p className="mt-2 max-w-[32ch] text-xs text-white/55">
-                  Cerrá el menú con <span className="font-mono text-white/75">Esc</span>.
-                </p>
               </div>
             </div>
           </div>

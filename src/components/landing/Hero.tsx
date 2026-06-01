@@ -7,7 +7,10 @@ type HeroProps = {
 
 export function Hero({ hero }: HeroProps) {
   return (
-    <section id="inicio" className="relative min-h-[620px] bg-[#0a0a0a] px-5 pb-12 pt-24 md:min-h-[600px] md:px-8 md:pt-28 xl:min-h-[640px]">
+    <section
+      id="inicio"
+      className="relative min-h-[520px] bg-[#0a0a0a] px-5 pb-8 pt-24 md:min-h-[600px] md:px-8 md:pb-12 md:pt-28 xl:min-h-[640px]"
+    >
       <div className="relative z-10 mx-auto grid max-w-6xl gap-12 md:grid-cols-[1.1fr_0.9fr] md:items-center">
         <div className="max-w-2xl transform-none">
           <p className="ds-kicker text-[#00ff41]">

@@ -812,6 +812,13 @@ body::after {
   z-index: 2;
 }
 
+@media (max-width: 640px) {
+  .logo-marquee::before,
+  .logo-marquee::after {
+    width: 56px;
+  }
+}
+
 .logo-marquee::before {
   background: linear-gradient(to right, var(--blue), transparent);
   left: 0;
