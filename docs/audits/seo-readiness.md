@@ -12,8 +12,8 @@ Dejar el SEO **técnico / social / semántico** listo para deployment, sin entra
 
 ## Metadata (Next.js)
 
-- `title`: `Design Honex | Social Media, Branding y Diseño en Córdoba`
-- `description`: `Social media, branding, diseño gráfico y contenido para negocios en Córdoba y remoto. Estrategia + diseño con criterio. Contactame por WhatsApp.`
+- `title`: `Design Honex | Branding, diseño gráfico y redes en Córdoba`
+- `description`: `Branding, diseño gráfico y contenido para redes para negocios en Córdoba y remoto. Estrategia visual clara para marcas que quieren destacar. Contactame por WhatsApp.`
 - `alternates.canonical`: `/`
 - `openGraph` + `twitter`: alineados con los valores anteriores.
 
@@ -35,8 +35,11 @@ Implementados como rutas de Next:
 
 ## Schema JSON-LD
 
-Se declara un `ProfessionalService` con base local y servicio remoto:
+Se declara un grafo JSON-LD con señales locales y semánticas más fuertes:
 
+- `WebSite` y `WebPage` enlazados al negocio.
+- `ProfessionalService` + `LocalBusiness` sobre la misma entidad.
+- `hasOfferCatalog` con los servicios visibles en la landing.
 - Name: `Design Honex`
 - URL: `https://designhonex.com`
 - Address: `Córdoba, Córdoba, AR` (sin calle)
@@ -46,6 +49,11 @@ Se declara un `ProfessionalService` con base local y servicio remoto:
 
 Archivo: `src/app/page.tsx`
 
+## Metadata extendida
+
+- `applicationName`, `creator`, `publisher`, `authors` y `keywords` definidos.
+- `robots` explícito con `index`, `follow` y max previews para Google.
+
 ## Links externos
 
 Todos los links externos relevantes usan `rel="noopener noreferrer"` cuando aplican.
@@ -53,4 +61,3 @@ Todos los links externos relevantes usan `rel="noopener noreferrer"` cuando apli
 ## Fuera de alcance (por decisión)
 
 - Keyword research + clustering + estrategia de contenidos (queda para PRD/issue posterior).
-

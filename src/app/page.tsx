@@ -24,31 +24,101 @@ import {
 } from "@/data/landing";
 
 export default function Home() {
+  const siteUrl = "https://designhonex.com";
+  const siteName = "Design Honex";
+  const siteDescription =
+    "Branding, diseño gráfico y contenido para redes para negocios en Córdoba y remoto. Estrategia visual clara para marcas que quieren destacar.";
+  const businessId = `${siteUrl}/#business`;
+  const webSiteId = `${siteUrl}/#website`;
+  const webPageId = `${siteUrl}/#webpage`;
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    name: "Design Honex",
-    url: "https://designhonex.com",
-    description:
-      "Social media, branding, diseño gráfico y contenido para negocios en Córdoba y remoto. Estrategia + diseño con criterio.",
-    image: "https://designhonex.com/opengraph-image",
-    logo: "https://designhonex.com/logo-designhonex.webp",
-    areaServed: ["Córdoba, Argentina", "Argentina", "Remote"],
-    address: {
-      "@type": "PostalAddress",
-      addressLocality: "Córdoba",
-      addressRegion: "Córdoba",
-      addressCountry: "AR",
-    },
-    contactPoint: [
+    "@graph": [
       {
-        "@type": "ContactPoint",
-        contactType: "customer support",
+        "@type": "WebSite",
+        "@id": webSiteId,
+        url: `${siteUrl}/`,
+        name: siteName,
+        description: siteDescription,
+        inLanguage: "es-AR",
+        publisher: {
+          "@id": businessId,
+        },
+      },
+      {
+        "@type": "WebPage",
+        "@id": webPageId,
+        url: `${siteUrl}/`,
+        name: `${siteName} | Branding, diseño gráfico y redes en Córdoba`,
+        description: siteDescription,
+        isPartOf: {
+          "@id": webSiteId,
+        },
+        about: {
+          "@id": businessId,
+        },
+        inLanguage: "es-AR",
+        primaryImageOfPage: {
+          "@type": "ImageObject",
+          url: `${siteUrl}/opengraph-image`,
+          width: 1200,
+          height: 630,
+        },
+      },
+      {
+        "@type": ["ProfessionalService", "LocalBusiness"],
+        "@id": businessId,
+        name: siteName,
+        url: `${siteUrl}/`,
+        description: siteDescription,
+        image: `${siteUrl}/opengraph-image`,
+        logo: `${siteUrl}/logo-designhonex.webp`,
         telephone: "+543533432075",
-        availableLanguage: ["es"],
+        email: "designhonex@gmail.com",
+        priceRange: "$$",
+        areaServed: ["Córdoba, Argentina", "Argentina", "Remote"],
+        address: {
+          "@type": "PostalAddress",
+          addressLocality: "Córdoba",
+          addressRegion: "Córdoba",
+          addressCountry: "AR",
+        },
+        contactPoint: [
+          {
+            "@type": "ContactPoint",
+            contactType: "customer support",
+            telephone: "+543533432075",
+            availableLanguage: ["es"],
+          },
+        ],
+        hasOfferCatalog: {
+          "@type": "OfferCatalog",
+          name: "Servicios de Design Honex",
+          itemListElement: services.map((service, index) => ({
+            "@type": "Offer",
+            position: index + 1,
+            name: service.title,
+            description: service.description,
+            url: `${siteUrl}/#servicios`,
+            itemOffered: {
+              "@type": "Service",
+              name: service.title,
+              serviceType: service.title,
+              description: service.description,
+              provider: {
+                "@id": businessId,
+              },
+              areaServed: ["Córdoba, Argentina", "Argentina", "Remote"],
+            },
+          })),
+        },
+        mainEntityOfPage: {
+          "@id": webPageId,
+        },
+        sameAs: ["https://www.instagram.com/designhonex"],
       },
     ],
-    sameAs: ["https://www.instagram.com/designhonex"],
   } as const;
 
   const faqsAreComplete = faqs.length > 0 && faqs.every((item) => Boolean(item.answer?.trim()));
