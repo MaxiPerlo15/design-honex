@@ -33,11 +33,12 @@ export function Portfolio({ items }: PortfolioProps) {
         <div className="logo-track">
           {repeatedItems.map((item, index) => {
             const isSoonCard = item.name === "Proximamente";
+            const logoScale = item.imageScale ?? 1;
             const card = (
               <article
-                className={`logo-card ${isSoonCard ? "portfolio-soon" : ""}`}
-                aria-label={item.name}
-                title={item.name}
+                className={`logo-card ${isSoonCard ? "portfolio-soon" : "brand-card"}`}
+                aria-label={item.name || "Marca"}
+                title={item.name || "Marca"}
               >
                 {isSoonCard ? (
                   <>
@@ -57,15 +58,14 @@ export function Portfolio({ items }: PortfolioProps) {
                           alt={item.name}
                           fill
                           sizes="(min-width: 768px) 280px, 220px"
-                          className="object-contain opacity-45 brightness-125 contrast-110"
+                          className="object-contain"
+                          style={logoScale === 1 ? undefined : { transform: `scale(${logoScale})` }}
                         />
                       ) : (
                         <span>{item.mark ?? item.name.slice(0, 2).toUpperCase()}</span>
                       )}
                     </div>
-                    <div className="portfolio-content">
-                      <h3 className="font-display text-xl font-black uppercase tracking-[0.04em]">{item.name}</h3>
-                    </div>
+                    <span className="sr-only">{item.name}</span>
                   </>
                 )}
               </article>

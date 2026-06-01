@@ -38,6 +38,7 @@ export type PortfolioItem = {
   category: string;
   mark?: string;
   image?: string;
+  imageScale?: number;
   href?: string;
   featured?: boolean;
 };
@@ -221,19 +222,19 @@ export const proofClaim: ProofClaim = {
   body: "Si las grandes marcas miran lo que hago, imaginate lo que puedo hacer por la tuya.",
   snapshots: [
     {
-      name: "design honex",
-      label: "DESIGN HONEX",
-      category: "Prueba visual",
-      image: "/publicacion-honex.webp",
-      href: "https://www.instagram.com/p/DXkZb2PllEv/?img_index=1",
+      name: "Popes",
+      label: "Popes",
+      category: "Original",
+      image: "/proof-popes.webp",
+      href: "https://www.instagram.com/p/DXkZB2PllEv/?img_index=1",
       featured: true,
     },
     {
       name: "Burger King",
       label: "Burger King",
       category: "Contraste",
-      image: "/publicacion-burgerking.webp",
-      href: "https://www.instagram.com/p/DXkZb2PllEv/?img_index=1",
+      image: "/proof-burgerking.webp",
+      href: "https://www.instagram.com/p/DXkZB2PllEv/?img_index=1",
       featured: false,
     },
   ],
@@ -248,7 +249,7 @@ export const portfolioItems: PortfolioItem[] = [
     href: "https://www.instagram.com/cjmdigitalescl/",
   },
   {
-    name: "Popes Burguers",
+    name: "Popes",
     category: "Portfolio",
     image: "/popes.webp",
     href: "https://www.instagram.com/popes.burguers/",
@@ -263,6 +264,7 @@ export const portfolioItems: PortfolioItem[] = [
     name: "Atomic Burger",
     category: "Portfolio",
     image: "/atomic.webp",
+    imageScale: 1.55,
     href: "https://www.instagram.com/atomicburgerok/",
   },
 ];
@@ -270,27 +272,27 @@ export const portfolioItems: PortfolioItem[] = [
 export const processSteps: ProcessStep[] = [
   {
     number: "01",
-    title: "Te entiendo",
+    title: "Nos conocemos",
     description:
-      "Antes de tocar nada, aprendo tu negocio, tu audiencia y tus objetivos. Nada genérico.",
+      "Primero charlamos. Contame quién sos, qué hacés y a dónde querés llegar. Sin formularios, sin presentaciones armadas. Una charla real.",
   },
   {
     number: "02",
-    title: "Estrategia",
+    title: "Vemos si encajamos",
     description:
-      "Plan de contenidos mensual con fechas, formatos y temas. Vos aprobás, yo ejecuto.",
+      "No trabajamos con todos. Si sentimos que podemos hacer algo bueno juntos, lo decimos. Si no, también. La honestidad primero.",
   },
   {
     number: "03",
-    title: "Producción",
+    title: "Armamos el plan",
     description:
-      "Diseño, copy y publicación. Me encargo de todo para que vos te enfoques en tu negocio.",
+      "Una vez que arrancamos, definimos qué necesitás, en qué tiempos y con qué objetivos. Todo claro desde el día uno.",
   },
   {
     number: "04",
-    title: "Resultados",
+    title: "Creamos juntos",
     description:
-      "Reportes reales, métricas claras y ajustes continuos. Sin excusas, con datos.",
+      "Tu negocio, nuestra creatividad. Trabajamos en equipo — vos conocés tu marca, nosotros sabemos cómo comunicarla.",
   },
 ];
 

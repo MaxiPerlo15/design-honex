@@ -35,8 +35,8 @@ export function ProofClaim({ claim }: ProofClaimProps) {
 
 function ProofSnapshotCard({ snapshot, featured = false }: { snapshot: ProofSnapshot; featured?: boolean }) {
   const className = featured
-    ? "bk-box btn-cut border-2 border-[#00ff41] text-[#00ff41]"
-    : "bk-box btn-cut border border-white/15 text-white/88";
+    ? "bk-box rounded-3xl border-2 border-[#00ff41] text-[#00ff41]"
+    : "bk-box rounded-3xl border border-white/15 text-white/88";
 
   const content = (
     <>
@@ -46,7 +46,7 @@ function ProofSnapshotCard({ snapshot, featured = false }: { snapshot: ProofSnap
           alt={snapshot.name}
           fill
           sizes="(min-width: 768px) 260px, 72vw"
-          className="object-cover object-top transition duration-500 scale-[1.12] group-hover:scale-[1.18]"
+          className="object-cover object-top transition duration-500 scale-[1] group-hover:scale-[1.05]"
         />
       ) : null}
     </>

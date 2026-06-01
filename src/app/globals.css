@@ -852,6 +852,11 @@ body::after {
   overflow: hidden;
 }
 
+.brand-card {
+  justify-content: center;
+  padding: 1.8rem;
+}
+
 .logo-card:hover {
   background: rgba(0, 0, 0, 0.55);
   transform: translateY(-4px);
@@ -882,21 +887,36 @@ body::after {
   padding-top: 7rem;
 }
 
-.portfolio-bg {
-  inset: 1.25rem;
-  opacity: 0.34;
-  position: absolute;
-  pointer-events: none;
-}
-
 .portfolio-content {
   position: relative;
   z-index: 1;
   padding-top: 7rem;
 }
 
+.portfolio-bg {
+  height: 120px;
+  left: 50%;
+  opacity: 1;
+  position: absolute;
+  pointer-events: none;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 220px;
+}
+
+.portfolio-bg img {
+  transform-origin: center;
+}
+
 .logo-card:hover .portfolio-bg {
-  opacity: 0.44;
+  opacity: 1;
+}
+
+@media (max-width: 420px) {
+  .portfolio-bg {
+    height: 110px;
+    width: 200px;
+  }
 }
 
 [data-reveal].visible,
