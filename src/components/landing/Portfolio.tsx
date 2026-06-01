@@ -19,13 +19,13 @@ export function Portfolio({ items }: PortfolioProps) {
         <div>
           <p className="ds-kicker text-[#00ff41]">Portfolio</p>
           <h2 className="ds-display mt-3">
-            Marcas
+            Mirá como
             <br />
-            <span className="text-outline">reales.</span>
+            <span className="text-outline">trabajo.</span>
           </h2>
         </div>
         <p className="ds-body max-w-lg text-white/68 md:self-center md:pt-10 lg:pt-14">
-          Branding, RRSS y contenido para negocios de Córdoba y del país. Esto es lo que hago, no lo que prometo.
+           Esto es lo que hago, no lo que prometo.
         </p>
       </div>
 

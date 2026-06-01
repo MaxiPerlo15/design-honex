@@ -244,7 +244,7 @@ export const portfolioItems: PortfolioItem[] = [
   {
     name: "CJM Digitales",
     category: "Portfolio",
-    image: "/juegos-digitales-chile-cjmdigitales.webp",
+    image: "/juegos-digitales-chile-cjmdigitales.webp", 
     featured: true,
     href: "https://www.instagram.com/cjmdigitalescl/",
   },
