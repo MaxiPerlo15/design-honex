@@ -1,15 +1,15 @@
-# PRD - Auditoria de Landing Page
+# PRD — Landing Page (Design Honex)
 
-**Proyecto:** Honex Design landing page  
-**Estado:** Draft auditado  
-**Fecha:** 2026-05-30  
-**Fuente:** Revision de codigo, build, tests y QA visual responsive con Playwright.
+**Proyecto:** Design Honex landing page  
+**Estado:** Activo  
+**Fecha:** 2026-06-01  
+**Fuente:** Estado actual del sitio + decisión validada para incorporar sección FAQs.
 
 ## Project Overview
 
-La landing presenta los servicios de Honex Design para potenciales clientes que necesitan gestion de redes, branding, contenido y estrategia digital.
+Landing frontend-only para presentar servicios de social media, branding/diseño gráfico y contenido.
 
-El sitio existe para mostrar criterio profesional, prueba de trabajo, servicios claros y caminos directos de contacto. Es una landing frontend-only, no una aplicacion SaaS.
+El sitio existe para mostrar criterio profesional, prueba de trabajo, servicios claros y caminos directos de contacto. No es una aplicación SaaS.
 
 ## Business Goal
 
@@ -23,7 +23,7 @@ El visitante ideal llega desde redes, recomendacion o busqueda directa; quiere e
 
 ## Brand Positioning
 
-Honex Design debe percibirse como una marca creativa, directa, moderna y profesional.
+Design Honex debe percibirse como una marca creativa, directa, moderna y profesional.
 
 El tono puede ser filoso y memorable, pero no debe cruzar la linea hacia afirmaciones sin respaldo, placeholders visibles o promesas que bajen confianza.
 
@@ -35,41 +35,30 @@ El tono puede ser filoso y memorable, pero no debe cruzar la linea hacia afirmac
 - Imagery style: trabajos reales, piezas visuales verificables y enlaces a portfolio cuando existan.
 - Motion philosophy: animacion con caracter, pero controlada; debe respetar `prefers-reduced-motion` y no impedir lectura.
 
-## Audit Findings
-
-- `npm test` falla. El test espera un link accesible como `/hablemos por whatsapp/i`, pero el CTA real expone `HABLEMOS DE ESTO por WhatsApp` en `src/components/landing/BusinessDiagnostic.spec.tsx:55` y `src/components/landing/BusinessDiagnostic.tsx`.
-- El contacto principal de WhatsApp esta inconsistente: el diagnostico usa `543533432075`, pero la seccion contacto muestra `Pendiente de numero final` y apunta a `https://wa.me/5490000000000` en `src/data/landing.ts:314`.
-- El portfolio no muestra trabajos reales; usa iconos/emoji como sustitutos en `src/data/landing.ts:221` y `src/components/landing/Portfolio.tsx:37`. Para una landing de diseño, esto debilita la prueba visual.
-- La afirmacion "Burger King copio mi diseño" no tiene evidencia enlazada ni contexto verificable en `src/data/landing.ts:199`. Asi como esta, es una afirmacion de alto riesgo reputacional.
-- El hero en desktop deja demasiado espacio vacio antes de la siguiente seccion por `min-h-[760px]` / `xl:min-h-[820px]` en `src/components/landing/Hero.tsx:9`.
-- El H1 renderizado concatena texto sin espacios en lectura DOM: `Tu marcano esinvisible.`. Debe conservar legibilidad semantica aunque visualmente este partido en lineas.
-- La carga de fuentes esta duplicada/inconsistente: se importa Google Fonts via CSS en `src/app/globals.css:1` y tambien `next/font` con Geist en `src/app/layout.tsx:2`, aunque el sistema visual usa Barlow/Space Mono.
-- El SEO social es minimo: metadata solo define `title` y `description` en `src/app/layout.tsx:15`; faltan Open Graph, Twitter card e imagen social.
-
 ## Information Architecture
 
 1. Hero
 2. Proof claim / prueba de autoridad
-3. Client marquee
-4. Services
-5. Business Diagnostic
-6. Portfolio
-7. Process
-8. Contact CTA
-9. Footer
+3. Services marquee (franja)
+4. Servicios
+5. Diagnóstico (Business Diagnostic)
+6. Portfolio / Marcas
+7. Proceso
+8. FAQs
+9. Contacto (CTA final)
+10. Footer
 
 ## Functional Requirements
 
-- El CTA de diagnostico debe tener nombre accesible y tests alineados con el copy final.
-- Todos los CTAs a WhatsApp deben usar el mismo numero final y el mismo formato de pais.
-- La seccion Contacto no debe mostrar placeholders en produccion.
-- El portfolio debe aceptar imagen, enlace externo o asset real por item; los iconos solo pueden ser fallback temporal no visible en version final.
-- La prueba de autoridad debe enlazar evidencia real o reformularse para evitar una afirmacion sin respaldo.
-- La navegacion debe llevar correctamente a cada seccion visible.
-- El hero debe mantener el mensaje principal y CTA visibles sin generar un bloque vacio innecesario en desktop.
-- El H1 debe ser visualmente igual o mejor, pero semanticamente legible para lectores de pantalla y extraccion de texto.
-- Las fuentes deben cargarse con una estrategia unica y coherente.
-- La metadata debe incluir Open Graph, Twitter card y una imagen social valida.
+- Navegación: el menú debe incluir link `FAQs` que scrollea a `#faqs` en mobile y desktop.
+- FAQs (máx. 5 items): sección ubicada entre `Proceso` y `Contacto`, sin obligar a que `Contacto` pase a fondo azul.
+- FAQs (titulo): encabezado visible `¿Tenés dudas?` en mobile y desktop.
+- FAQs (desktop): se ven los 5 títulos; cada item despliega/colapsa respuesta al click; solo una abierta a la vez; permitir 0 abiertas.
+- FAQs (mobile): por defecto solo se ve el encabezado; tap en el encabezado muestra/oculta la lista; dentro, acordeón con el mismo comportamiento (1 abierta, permitir 0).
+- FAQs (mobile reset): al colapsar la lista, se cierra cualquier pregunta abierta (reset de estado).
+- FAQs (contenido): por ahora solo se define estructura (títulos); las respuestas se cargarán luego. No renderizar placeholders visibles como “próximamente”.
+- SEO: NO agregar `FAQPage` JSON-LD hasta tener las respuestas finales.
+- Diseño: mantener el design system existente (tipografía `ds-*`, paleta, jerarquía y espaciados).
 
 ## Non-Functional Requirements
 
@@ -109,15 +98,11 @@ El tono puede ser filoso y memorable, pero no debe cruzar la linea hacia afirmac
 
 ## Success Criteria
 
-La auditoria se considera implementada cuando:
+El proyecto se considera completo cuando:
 
-- `docs/prd.md` deja de tener placeholders y funciona como fuente de verdad.
+- La sección FAQs existe, respeta el design system y está ubicada según el IA.
+- El link `FAQs` del menú scrollea a la sección correcta en mobile y desktop.
+- En desktop se ven los 5 títulos y el acordeón cumple el comportamiento definido (1 abierta, permitir 0).
+- En mobile el encabezado controla el colapso de la lista y el reset de estado funciona.
+- No hay placeholders visibles en respuestas.
 - `npm run build`, `npm run lint` y `npm test` pasan.
-- El numero de WhatsApp es final y consistente en diagnostico/contacto.
-- No queda ningun placeholder visible en la landing.
-- El portfolio muestra prueba visual real o enlaces verificables.
-- La afirmacion sobre Burger King queda respaldada con evidencia o reformulada.
-- El hero desktop reduce el espacio vacio sin perder impacto visual.
-- El H1 conserva lectura semantica correcta.
-- Metadata social basica esta configurada.
-- Mobile, tablet y desktop fueron revisados visualmente.

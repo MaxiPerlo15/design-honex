@@ -10,9 +10,9 @@ export function Services({ services }: ServicesProps) {
       id="servicios"
       className="scroll-mt-28 bg-[#0a0a0a] px-5 py-20 md:scroll-mt-32 md:px-8 md:py-24"
     >
-      <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl">
         <div data-reveal>
-          <p className="ds-kicker text-[#00ff41]">Lo que hago</p>
+          <p className="ds-kicker -translate-y-8 text-[#00ff41] md:translate-y-0">Lo que hago</p>
           <h2 className="ds-display mt-3">
             Servicios
             <br />

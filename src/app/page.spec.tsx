@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen } from "@testing-library/react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import Home from "./page";
@@ -39,6 +39,10 @@ vi.mock("@/components/landing/Process", () => ({
   Process: () => <section data-testid="process">Process</section>,
 }));
 
+vi.mock("@/components/landing/Faqs", () => ({
+  Faqs: () => <section data-testid="faqs">Faqs</section>,
+}));
+
 vi.mock("@/components/landing/Contact", () => ({
   Contact: () => <section data-testid="contact">Contact</section>,
 }));
@@ -49,6 +53,7 @@ vi.mock("@/components/landing/Footer", () => ({
 
 afterEach(() => {
   vi.clearAllMocks();
+  cleanup();
 });
 
 describe("Home page", () => {
@@ -59,5 +64,16 @@ describe("Home page", () => {
     const process = screen.getByTestId("process");
 
     expect(diagnostic.compareDocumentPosition(process) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+  });
+
+  it("renders the FAQs section between the process and contact blocks", () => {
+    render(<Home />);
+
+    const process = screen.getByTestId("process");
+    const faqs = screen.getByTestId("faqs");
+    const contact = screen.getByTestId("contact");
+
+    expect(process.compareDocumentPosition(faqs) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
+    expect(faqs.compareDocumentPosition(contact) & Node.DOCUMENT_POSITION_FOLLOWING).toBeTruthy();
   });
 });

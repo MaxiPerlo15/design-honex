@@ -17,7 +17,7 @@ export function Portfolio({ items }: PortfolioProps) {
     >
       <div className="fade-in mx-auto grid max-w-6xl gap-7 md:grid-cols-2 md:items-end" data-reveal>
         <div>
-          <p className="ds-kicker text-[#00ff41]">Portfolio</p>
+          <p className="ds-kicker -translate-y-8 text-[#00ff41] md:translate-y-0">Portfolio</p>
           <h2 className="ds-display mt-3">
             Mirá como
             <br />

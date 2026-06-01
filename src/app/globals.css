@@ -668,6 +668,12 @@ body::after {
   position: relative;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  .process-bg-video {
+    display: none;
+  }
+}
+
 .process-section .ds-kicker {
   color: var(--neon);
 }

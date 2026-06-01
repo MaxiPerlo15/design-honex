@@ -16,7 +16,7 @@ export function Contact({ links }: ContactProps) {
             <span className="pulse-dot" />
             Disponible para nuevos clientes
           </div>
-          <h2 className="ds-display mt-7">
+          <h2 className="ds-display mt-7 text-center md:text-left">
             ¿<span className="text-[#4b3bff]">Arran</span>
             <br />
             <span className="text-outline">camos?</span>

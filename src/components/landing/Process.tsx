@@ -8,13 +8,39 @@ export function Process({ steps }: ProcessProps) {
   return (
     <section
       id="proceso"
-      className="process-section relative scroll-mt-28 overflow-hidden bg-[#1400ff] px-5 py-20 md:scroll-mt-32 md:px-8 md:py-24"
+      className="process-section relative scroll-mt-28 overflow-hidden bg-[#0a0a0a] px-5 py-20 md:scroll-mt-32 md:px-8 md:py-24"
     >
-      <div className="absolute inset-0 bg-stripes" aria-hidden="true" />
+      <div className="absolute inset-0" aria-hidden="true">
+        <video
+          className="process-bg-video pointer-events-none absolute inset-0 h-full w-full object-cover md:hidden"
+          autoPlay
+          playsInline
+          muted
+          loop
+          preload="none"
+          poster="/videos/proceso-mobile-poster.jpg"
+        >
+          <source src="/videos/proceso-mobile.webm" type="video/webm" />
+          <source src="/videos/proceso-mobile.mp4" type="video/mp4" />
+        </video>
+        <video
+          className="process-bg-video pointer-events-none absolute inset-0 hidden h-full w-full object-cover md:block"
+          autoPlay
+          playsInline
+          muted
+          loop
+          preload="none"
+          poster="/videos/proceso-desktop-poster.jpg"
+        >
+          <source src="/videos/proceso-desktop.webm" type="video/webm" />
+          <source src="/videos/proceso-desktop.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-black/70" />
+      </div>
 
       <div className="relative z-10 mx-auto max-w-6xl">
         <div data-reveal>
-          <p className="ds-kicker text-[#00ff41]">Sin vueltas</p>
+          <p className="ds-kicker -translate-y-8 text-[#00ff41] md:translate-y-0">Sin vueltas</p>
           <h2 className="ds-display mt-3">
             Así
             <br />

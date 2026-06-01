@@ -65,6 +65,12 @@ export type ProcessStep = {
   description: string;
 };
 
+export type FaqItem = {
+  id: string;
+  question: string;
+  answer?: string;
+};
+
 export type ContactLink = {
   label: string;
   value: string;
@@ -147,6 +153,7 @@ export const navLinks: NavLink[] = [
   { label: "Tu Negocio", href: "#diagnostico" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Proceso", href: "#proceso" },
+  { label: "FAQs", href: "#faqs" },
   { label: "Hablemos", href: "#contacto", emphasis: true },
 ];
 
@@ -293,6 +300,34 @@ export const processSteps: ProcessStep[] = [
     title: "Creamos juntos",
     description:
       "Tu negocio, nuestra creatividad. Trabajamos en equipo — vos conocés tu marca, nosotros sabemos cómo comunicarla.",
+  },
+];
+
+export const faqs: FaqItem[] = [
+  {
+    id: "negocios",
+    question: "¿Con qué tipos de negocios trabajas?",
+    answer: "Con todo tipo: gastronomía, estética, moda, servicios, eventos, comercios locales, emprendimientos y más. Lo importante no es el rubro — es que tengamos buena comunicación y que realmente pueda aportar valor a tu proyecto. Si no siento que puedo ayudarte, te lo digo directo"
+  },
+  {
+    id: "necesidad",
+    question: "¿Qué necesitas para arrancar?",
+    answer: "No necesitás nada. Solo Ganas. Yo me encargo de todo. No necesitás saber de diseño, ni de redes, ni tener nada preparado. Me contás quién sos y qué hacés, y yo traduzco eso en contenido, estrategia y presencia digital. Vos seguís enfocado en lo tuyo."
+  },
+  {
+    id: "tiempos",
+    question: "¿Cuánto tarda en verse resultados?",
+    answer: "Depende del punto de partida y del servicio. En redes orgánicas, los primeros resultados reales se ven entre el mes 2 y 3 — antes de eso estamos construyendo base. Con publicidad paga (Meta Ads / Google Ads) los resultados son más rápidos, pero igual necesitan optimización. No prometemos milagros en una semana. Prometemos trabajo consistente."
+  },
+  {
+    id: "revisiones",
+    question: "¿Qué pasa si no me gusta como quedo algo?",
+    answer: "Lo ajustamos. Las revisiones están incluidas en el proceso — no trabajamos con se entrega y listo. Si algo no te convence, me lo decís y lo corregimos. La idea es que el resultado te represente de verdad."
+  },
+  {
+    id: "remoto",
+    question: "¿Trabajas en Córdoba y en remoto?",
+    answer: "Sí. Trabajo con clientes de Córdoba y también 100% remoto. Coordinamos por WhatsApp/Meet, definimos el plan, y tenés entregas, seguimiento de forma ordenada. La distancia no cambia el proceso: cambia el canal."
   },
 ];
 
