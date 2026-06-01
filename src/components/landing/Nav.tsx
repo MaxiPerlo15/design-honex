@@ -163,7 +163,7 @@ export function Nav({ logoSrc, logoAlt, links }: NavProps) {
                 </div>
               </div>
 
-              <div className="border-t border-white/10 px-5 pb-[calc(env(safe-area-inset-bottom)+24px)] pt-4">
+              <div className="border-t border-white/10 px-5 pb-[calc(env(safe-area-inset-bottom)+24px)] pt-4 sticky bottom-0 bg-[#0a0a0a]">
                 <a
                   className="btn-cut magnetic block bg-[#1400ff] px-5 py-3.5 text-center font-display text-[13px] font-black uppercase tracking-[0.12em] text-white transition hover:-translate-y-0.5 hover:bg-[#0d00cc] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00ff41] focus-visible:outline-offset-4"
                   href={ctaLink.href}

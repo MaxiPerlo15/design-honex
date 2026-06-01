@@ -75,7 +75,7 @@ export function Faqs({ items }: FaqsProps) {
                     <button
                       id={buttonId}
                       type="button"
-                      className="flex w-full items-center justify-between gap-6 px-5 py-4 text-left font-display text-[13px] font-black uppercase tracking-[0.12em] text-white/90 transition hover:bg-white/[0.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00ff41] focus-visible:outline-offset-4 md:px-7 md:py-5"
+                      className="flex w-full items-center justify-between gap-6 px-5 py-4 text-left font-display text-[14px] font-black uppercase tracking-[0.12em] text-white/90 transition hover:bg-white/[0.02] focus-visible:outline focus-visible:outline-2 focus-visible:outline-[#00ff41] focus-visible:outline-offset-4 md:px-7 md:py-5 md:text-[15px]"
                       aria-expanded={isOpen}
                       aria-controls={panelId}
                       onClick={() => setOpenItemId((prev) => (prev === item.id ? null : item.id))}
