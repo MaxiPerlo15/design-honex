@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="330" viewBox="0 0 1200 330" fill="none">
+  <rect width="1200" height="330" rx="20" fill="#0B0B0D"/>
+  <path d="M0 264h1200v66H0z" fill="#1535FF"/>
+  <text x="52" y="54" fill="#C5FF39" font-family="Arial,Helvetica,sans-serif" font-size="14" font-weight="700" letter-spacing="3">DIAGNÓSTICO · ESQUEMA EDITORIAL, NO CAPTURA DE INTERFAZ</text>
+  <g font-family="Arial,Helvetica,sans-serif">
+    <rect x="52" y="100" width="235" height="116" rx="12" fill="#151519" stroke="#6F7078"/>
+    <text x="76" y="144" fill="#F7F7F4" font-size="21" font-weight="700">01 / Responder</text><text x="76" y="178" fill="#B9BAC1" font-size="16">Dos preguntas breves</text>
+    <path d="M300 158h62m-11-11 11 11-11 11" stroke="#C5FF39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="380" y="100" width="235" height="116" rx="12" fill="#151519" stroke="#1535FF"/>
+    <text x="404" y="144" fill="#F7F7F4" font-size="21" font-weight="700">02 / Evaluar</text><text x="404" y="178" fill="#B9BAC1" font-size="16">Reglas deterministas</text>
+    <path d="M628 158h62m-11-11 11 11-11 11" stroke="#C5FF39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="708" y="100" width="195" height="116" rx="12" fill="#151519" stroke="#C5FF39"/>
+    <text x="732" y="144" fill="#F7F7F4" font-size="21" font-weight="700">03 / Orientar</text><text x="732" y="178" fill="#B9BAC1" font-size="16">Mostrar resultado</text>
+    <path d="M916 158h62m-11-11 11 11-11 11" stroke="#C5FF39" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <rect x="996" y="100" width="155" height="116" rx="12" fill="#151519" stroke="#1535FF"/>
+    <text x="1016" y="144" fill="#F7F7F4" font-size="20" font-weight="700">04 / Contactar</text><text x="1016" y="178" fill="#B9BAC1" font-size="16">WhatsApp</text>
+  </g>
+  <text x="52" y="300" fill="#F7F7F4" font-family="Arial,Helvetica,sans-serif" font-size="14">Frontend · sin backend · no almacena las respuestas</text>
+</svg>
